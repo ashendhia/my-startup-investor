@@ -1,0 +1,10 @@
+{
+  "example": [
+    {
+      "name": "example",
+      "type": "string",
+      "required": true,
+      "description": "example"
+    }
+  ]
+}
