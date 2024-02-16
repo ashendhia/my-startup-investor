@@ -1,21 +1,30 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import Home from "./pages/Home";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import SharedLayout from "./pages/SharedLayout";
+import Dashboard from "./pages/Dashboard";
+import StartUps from "./pages/StartUps";
+import Map from "./pages/Map";
+import Funded from "./pages/Funded";
 import Profile from "./pages/Profile";
+import Settings from "./pages/Settings";
+
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/profile" element={<Profile />} />
-
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Navigate to="dashboard" />} />
+          <Route path="/dashboard" element={<SharedLayout />}>
+            <Route index element={<Navigate to="/dashboard/home" />} />
+            <Route path="/dashboard/home" element={<Dashboard />} />
+            <Route path="startups" element={<StartUps />} />
+            <Route path="map" element={<Map />} />
+            <Route path="tracking" element={<Funded />} />
+            <Route path="profile" element={<Profile />} />
+            <Route path="settings" element={<Settings />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
