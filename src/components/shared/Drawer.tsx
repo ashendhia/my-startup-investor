@@ -1,4 +1,4 @@
-import { styled, Theme, CSSObject } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import MuiDrawer from "@mui/material/Drawer";
 import Divider from "@mui/material/Divider";
 
@@ -14,11 +14,11 @@ import { NavLink } from "react-router-dom";
 
 const drawerWidth = 260;
 
-const openedMixin = (theme: Theme): CSSObject => ({
+const openedMixin = () => ({
   width: drawerWidth,
 });
 
-const closedMixin = (theme: Theme): CSSObject => ({});
+const closedMixin = () => ({});
 
 const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",
@@ -32,18 +32,18 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 
 const Drawer = styled(MuiDrawer, {
   shouldForwardProp: (prop) => prop !== "open",
-})(({ theme, open }) => ({
+})(({ open }) => ({
   width: drawerWidth,
   flexShrink: 0,
   whiteSpace: "nowrap",
   boxSizing: "border-box",
   ...(open && {
-    ...openedMixin(theme),
-    "& .MuiDrawer-paper": openedMixin(theme),
+    ...openedMixin(),
+    "& .MuiDrawer-paper": openedMixin(),
   }),
   ...(!open && {
-    ...closedMixin(theme),
-    "& .MuiDrawer-paper": closedMixin(theme),
+    ...closedMixin(),
+    "& .MuiDrawer-paper": closedMixin(),
   }),
 }));
 
