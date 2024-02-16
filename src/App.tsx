@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import SharedLayout from './pages/SharedLayout'
 import Dashboard from './pages/Dashboard'
-import StartUps from './pages/StartUps'
+import FindStartUps from './pages/FindStartUps'
 
 function App() {
 
@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path='/' element={<SharedLayout />}>
           <Route index element={<Dashboard />} />
-          <Route path="find-startups" element={<StartUps />} />
+          <Route path="find-startups" element={<FindStartUps />} />
         </Route>
       </Routes>
     </BrowserRouter>

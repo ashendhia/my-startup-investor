@@ -1,0 +1,116 @@
+{
+  "startups": [
+    {
+      "name": "Tech Innovations Inc.",
+      "sector": "Technology",
+      "marketCap": 1000000000,
+      "activeYears": 3,
+      "region": "North America",
+      "numberOfInvestors": 10
+    },
+    {
+      "name": "BioHealth Solutions Ltd.",
+      "sector": "Biotechnology",
+      "marketCap": 750000000,
+      "activeYears": 5,
+      "region": "Europe",
+      "numberOfInvestors": 8
+    },
+    {
+      "name": "Green Energy Technologies",
+      "sector": "Renewable Energy",
+      "marketCap": 500000000,
+      "activeYears": 2,
+      "region": "Asia",
+      "numberOfInvestors": 6
+    },
+    {
+      "name": "FoodTech Enterprises",
+      "sector": "Food and Beverage",
+      "marketCap": 300000000,
+      "activeYears": 1,
+      "region": "South America",
+      "numberOfInvestors": 4
+    },
+    {
+      "name": "EduTech Solutions",
+      "sector": "Education",
+      "marketCap": 200000000,
+      "activeYears": 4,
+      "region": "Africa",
+      "numberOfInvestors": 7
+    },
+    {
+      "name": "MediCare Innovations",
+      "sector": "Healthcare",
+      "marketCap": 600000000,
+      "activeYears": 6,
+      "region": "North America",
+      "numberOfInvestors": 9
+    },
+    {
+      "name": "FinanceTech Group",
+      "sector": "Finance",
+      "marketCap": 400000000,
+      "activeYears": 3,
+      "region": "Europe",
+      "numberOfInvestors": 5
+    },
+    {
+      "name": "TravelTech Solutions",
+      "sector": "Travel and Hospitality",
+      "marketCap": 250000000,
+      "activeYears": 2,
+      "region": "Asia",
+      "numberOfInvestors": 6
+    },
+    {
+      "name": "SpaceTech Enterprises",
+      "sector": "Space Technology",
+      "marketCap": 800000000,
+      "activeYears": 4,
+      "region": "North America",
+      "numberOfInvestors": 8
+    },
+    {
+      "name": "FashionTech Co.",
+      "sector": "Fashion",
+      "marketCap": 150000000,
+      "activeYears": 1,
+      "region": "Europe",
+      "numberOfInvestors": 3
+    }
+  ],
+  "sectors": [
+    {
+      "name": "Technology"
+    },
+    {
+      "name": "Biotechnology"
+    },
+    {
+      "name": "Renewable Energy"
+    },
+    {
+      "name": "Food and Beverage"
+    },
+    {
+      "name": "Education"
+    },
+    {
+      "name": "Healthcare"
+    },
+    {
+      "name": "Finance"
+    },
+    {
+      "name": "Travel and Hospitality"
+    },
+    {
+      "name": "Space Technology"
+    },
+    {
+      "name": "Fashion"
+    }
+  ]
+}
