@@ -1,5 +1,3 @@
-import * as React from "react";
-import { BarChart } from "@mui/x-charts";
 // import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -13,21 +11,15 @@ import {
 // import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { PieChart } from "@mui/x-charts/PieChart";
 
 export default function BasicPie() {
   return (
-    <Card className="w-[32rem]  my-10 mx-10">
+    <Card className="col-span-3">
       <Tabs
         defaultValue="year"
-        className="w-full justify-between flex flex-col ">
+        className="w-full justify-between flex flex-col "
+      >
         <CardHeader className="w-full">
           <CardTitle className="flex flex-row w-full">
             {" "}
@@ -42,8 +34,8 @@ export default function BasicPie() {
             Here you find the market share in year , month , week{" "}
           </CardDescription>
         </CardHeader>
-        <CardContent className="space-y-2 self-center">
-          <TabsContent value="week">
+        <CardContent className="space-y-3 self-center w-full">
+          <TabsContent value="week" className="w-full">
             {" "}
             <PieChart
               series={[
@@ -55,11 +47,10 @@ export default function BasicPie() {
                   ],
                 },
               ]}
-              width={500}
               height={300}
             />
           </TabsContent>
-          <TabsContent value="month">
+          <TabsContent value="month" className="w-full">
             {" "}
             <PieChart
               series={[
@@ -71,11 +62,10 @@ export default function BasicPie() {
                   ],
                 },
               ]}
-              width={500}
               height={300}
             />
           </TabsContent>
-          <TabsContent value="year">
+          <TabsContent value="year" className="w-full">
             {" "}
             <PieChart
               series={[
@@ -87,7 +77,6 @@ export default function BasicPie() {
                   ],
                 },
               ]}
-              width={500}
               height={300}
             />
           </TabsContent>

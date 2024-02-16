@@ -1,12 +1,11 @@
 import BasicBars from "../components/Home/BasicBars";
-import React from "react";
 import LineGraphe from "../components/Home/LineGraphe";
 import BasicPie from "../components/Home/BasicPie";
 import StatRec from "@/components/Home/StatRec";
 const stat = [
   {
-    Name: "New request",
-    Number: 41,
+    Name: "New Requests",
+    Number: 4,
   },
   {
     Name: "Completed task",
@@ -19,9 +18,9 @@ const stat = [
 ];
 const Home = () => {
   return (
-    <div className="flex flex-row  flex-wrap w-full bg-slate-50 ">
-      {stat.map(({ Name, Number }) => (
-        <StatRec Name={Name} Number={Number} />
+    <div className="grid grid-cols-6 w-full gap-6">
+      {stat.map((statRec) => (
+        <StatRec Name={statRec.Name} Number={statRec.Number} />
       ))}
       <BasicBars />
       <LineGraphe />

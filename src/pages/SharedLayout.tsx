@@ -1,4 +1,4 @@
-import NavBar from "@/components/shared/NavBar";
+import NavBar from "@/components/Navigation/NavBar";
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
 
@@ -8,7 +8,7 @@ const SharedLayout = () => {
     <div className="flex flex-col w-full">
       <NavBar open={open} setOpen={setOpen} />
       <div
-        className={`w-full h-[100vh] overflow-hidden ${
+        className={`w-full min-h-screen bg-slate-50 ${
           open ? "sideBarActive" : "sideBar"
         }`}
       >
