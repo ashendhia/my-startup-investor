@@ -18,11 +18,7 @@ const StartUpForm = () => {
 
   const navigate = useNavigate();
 
-  const id = 2
 const formSchema = z.object({
-  id: z.number().min(1, {
-    message: "Name must be at least 2 characters.",
-  }),
   name: z.string().min(2, {
     message: "Name must be at least 2 characters.",
   }),
@@ -59,7 +55,6 @@ const formSchema = z.object({
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      id: id+1,
       name: "",
       sector: "",
       marketCap: "",

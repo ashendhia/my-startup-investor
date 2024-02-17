@@ -11,27 +11,27 @@ import FindStartUps from "./pages/FindStartUps";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ProtectedRoute from "./components/ProtectedRoute";
-// import RoadMapStartUp from "./pages/RoadMapStartUp";
-// import SharedLayoutStartup from "./pages/SharedLayoutStartup";
-// import LegalHelp from "./pages/LegalHelp";
-// import Investments from "./pages/Investments";
-// import Advisors from "./pages/Advisors";
-// import ProfileStartup from "./pages/ProfileStartup";
-// import SettingsStartup from "./pages/SettingsStartup";
-// import RoadMapFirst from "./components/RoadMapStartUp/RoadMapFirst";
-// import RoadMapSecond from "./components/RoadMapStartUp/RoadMapSecond";
-// import RoadMapThird from "./components/RoadMapStartUp/RoadMapThird";
-// import RoadMapForth from "./components/RoadMapStartUp/RoadMapForth";
-// import RoadMapFifth from "./components/RoadMapStartUp/RoadMapFifth";
+import RoadMapStartUp from "./pages/RoadMapStartUp";
+import SharedLayoutStartup from "./pages/SharedLayoutStartup";
+import LegalHelp from "./pages/LegalHelp";
+import Investments from "./pages/Investments";
+import Advisors from "./pages/Advisors";
+import ProfileStartup from "./pages/ProfileStartup";
+import SettingsStartup from "./pages/SettingsStartup";
+import RoadMapFirst from "./components/RoadMapStartUp/RoadMapFirst";
+import RoadMapSecond from "./components/RoadMapStartUp/RoadMapSecond";
+import RoadMapThird from "./components/RoadMapStartUp/RoadMapThird";
+import RoadMapForth from "./components/RoadMapStartUp/RoadMapForth";
+import RoadMapFifth from "./components/RoadMapStartUp/RoadMapFifth";
+import Investors from "./pages/Investors";
 import { PageProvider } from "./context/PageContext";
-// import Investors from "./pages/Investors";
 
 function App() {
   return (
     <BrowserRouter>
       <PageProvider>
         <Routes>
-          <Route path="/" element={<Navigate to="/login" />} />
+          <Route path="/" element={<Navigate to="/dashboard/home" />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route
@@ -58,7 +58,6 @@ function App() {
                 </ProtectedRoute>
               }
             />
-            0.58654462
             <Route
               path="/dashboard/map"
               element={
@@ -88,6 +87,113 @@ function App() {
               element={
                 <ProtectedRoute>
                   <Settings />
+                </ProtectedRoute>
+              }
+            />
+          </Route>
+          <Route
+            path="/startup"
+            element={
+              <ProtectedRoute>
+                <SharedLayoutStartup />
+              </ProtectedRoute>
+            }
+          >
+            <Route
+              path="/startup/roadmap"
+              element={
+                <ProtectedRoute>
+                  <RoadMapStartUp />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/startup/roadmap/1"
+              element={
+                <ProtectedRoute>
+                  <RoadMapFirst />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/startup/roadmap/2"
+              element={
+                <ProtectedRoute>
+                  <RoadMapSecond />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/startup/roadmap/3"
+              element={
+                <ProtectedRoute>
+                  <RoadMapThird />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/startup/roadmap/4"
+              element={
+                <ProtectedRoute>
+                  <RoadMapForth />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/startup/roadmap/5"
+              element={
+                <ProtectedRoute>
+                  <RoadMapFifth />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="/startup/legalhelp"
+              element={
+                <ProtectedRoute>
+                  <LegalHelp />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/startup/investments"
+              element={
+                <ProtectedRoute>
+                  <Investments />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/startup/investors"
+              element={
+                <ProtectedRoute>
+                  <Investors />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="/startup/advisors"
+              element={
+                <ProtectedRoute>
+                  <Advisors />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/startup/profile"
+              element={
+                <ProtectedRoute>
+                  <ProfileStartup />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/startup/settings"
+              element={
+                <ProtectedRoute>
+                  <SettingsStartup />
                 </ProtectedRoute>
               }
             />
