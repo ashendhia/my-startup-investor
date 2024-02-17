@@ -1,6 +1,5 @@
 import BasicPie from "@/components/Home/BasicPie";
 import StatRec from "@/components/Home/StatRec";
-import React from "react";
 
 const Investments = () => {
   return (

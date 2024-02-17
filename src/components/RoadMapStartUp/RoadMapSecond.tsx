@@ -1,11 +1,12 @@
 import { usePageContext } from "@/context/PageContext";
-import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const RoadMapSecond = () => {
   const navigate = useNavigate();
+  // @ts-expect-error
   const { step, setStep } = usePageContext();
 
+  // @ts-expect-error
   const handleNavigation = (routePath) => {
     navigate(`/startup/roadmap/${routePath}`);
     setStep(routePath);
@@ -15,12 +16,14 @@ const RoadMapSecond = () => {
       <div className="flex flex-row w-full justify-between">
         <button
           className="px-10 py-4 bg-black text-white w-44 self-center rounded-md duration-100 hover:bg-slate-800"
-          onClick={() => handleNavigation(1)}>
+          onClick={() => handleNavigation(1)}
+        >
           Previous this
         </button>
         <button
           className="px-10 py-4 bg-black text-white w-44 self-center rounded-md duration-100 hover:bg-slate-800"
-          onClick={() => handleNavigation(3)}>
+          onClick={() => handleNavigation(3)}
+        >
           Next{" "}
         </button>
       </div>

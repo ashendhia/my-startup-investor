@@ -1,5 +1,4 @@
 import RectangleInvestors from "@/components/Investissement/RectangleInvestors";
-import React from "react";
 
 const Investors = () => {
   return (

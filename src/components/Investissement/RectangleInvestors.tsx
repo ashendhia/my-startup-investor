@@ -1,6 +1,12 @@
-import React from "react";
-
-const RectangleInvestors = ({ First_Name, Last_Name, Description }) => {
+const RectangleInvestors = ({
+  First_Name,
+  Last_Name,
+  Description,
+}: {
+  First_Name: string;
+  Last_Name: string;
+  Description: string;
+}) => {
   return (
     <div className="w-full px-10 py-8 bg-gray-100 rounded-md  flex flex-row cursor-pointer my-5">
       <div className="flex flex-col">

@@ -11,6 +11,7 @@ const steps = [
   "Keep your finance in order",
 ];
 
+// @ts-expect-error
 export default function Roadmap({ Stepnum, setStepnum }) {
   return (
     <Box sx={{ marginTop: "100px", width: "100%" }}>

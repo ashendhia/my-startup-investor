@@ -1,5 +1,5 @@
 import SideBar from "@/components/Navigation/SideBar";
-import React, { useState } from "react";
+import { useState } from "react";
 import { Outlet } from "react-router-dom";
 
 const SharedLayoutStartup = () => {
@@ -11,7 +11,8 @@ const SharedLayoutStartup = () => {
       <div
         className={`w-full min-h-screen bg-slate-50 ${
           open ? "sideBarActive" : "sideBar"
-        }`}>
+        }`}
+      >
         <Outlet />
       </div>
     </div>

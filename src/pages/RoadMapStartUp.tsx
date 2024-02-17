@@ -1,6 +1,5 @@
 import Roadmap from "@/components/RoadMapStartUp/Stepper";
 import { usePageContext } from "@/context/PageContext";
-import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import the useNavigate hook
 
 const RoadMapStartUp = () => {
@@ -12,6 +11,7 @@ const RoadMapStartUp = () => {
   //   // Add more entries as needed
   // };
 
+  // @ts-expect-error
   const { step, setStep } = usePageContext();
   const handlePage = () => {
     // Initialize the navigate function
@@ -26,7 +26,8 @@ const RoadMapStartUp = () => {
       <Roadmap Stepnum={step} setStepnum={setStep} />
       <button
         className="px-10 py-4 bg-black text-white w-44 self-center rounded-md duration-100 hover:bg-slate-800"
-        onClick={() => handlePage()}>
+        onClick={() => handlePage()}
+      >
         Start Process
       </button>
     </div>

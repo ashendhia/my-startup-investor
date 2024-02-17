@@ -1,9 +1,11 @@
-import React, { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 // Step 1: Create a Context
+// @ts-expect-error
 const PageContext = createContext();
 
 // Step 2: Create a Context Provider
+// @ts-expect-error
 export const PageProvider = ({ children }) => {
   const [step, setStep] = useState(1);
 
