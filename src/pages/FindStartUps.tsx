@@ -19,7 +19,7 @@ const FindStartUps = () => {
         let url = `${apiUrl}/startups?page=${currentPage}`;
         const res = await axios.get(url);
         if (res.status === 200) {
-          const data = res.data;
+          const data = res.data.startups;
           setStartups(data);
         }
       } catch (err: unknown) {
