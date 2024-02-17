@@ -79,6 +79,32 @@
       "activeYears": 1,
       "region": "Europe",
       "numberOfInvestors": 3
+    },
+    {
+      "id": 1,
+      "name": "sadfsd",
+      "sector": "fasfdsf",
+      "marketCap": "asfddf",
+      "activeYears": "dsafa",
+      "region": "sadfad",
+      "longitude": "sadfsdddsafsadf",
+      "latitude": "fasfdsfsadfds",
+      "email": "fdsaf@gmail.com",
+      "password": "fdsafdfsad",
+      "phoneNumber": "fsadfasdfsdaf"
+    },
+    {
+      "id": 3,
+      "name": "safsadf",
+      "sector": "fasdfsdaf",
+      "marketCap": "fsafsdafasdfds",
+      "activeYears": "asdfdsaf",
+      "region": "fsadfsdaf",
+      "longitude": "fsdafsad",
+      "latitude": "fadsfdsaf",
+      "email": "fsdfda@gmail.com",
+      "password": "fdsafsdfas",
+      "phoneNumber": "fasdffsadf"
     }
   ],
   "sectors": [
@@ -111,6 +137,54 @@
     },
     {
       "name": "Fashion"
+    }
+  ],
+  "investors": [
+    {
+      "firstname": "John",
+      "lastname": "Doe",
+      "email": "john.doe@example.com",
+      "password": "password123",
+      "phoneNumber": "1234567890",
+      "city": "New York",
+      "zipCode": "10001",
+      "address": "123 Main St",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "firstname": "Jane",
+      "lastname": "Smith",
+      "email": "jane.smith@example.com",
+      "password": "password456",
+      "phoneNumber": "0987654321",
+      "city": "Los Angeles",
+      "zipCode": "90001",
+      "address": "456 Elm St",
+      "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      "id": 1,
+      "firstname": "fasf",
+      "lastname": "fsafsa",
+      "email": "fsdadfa@gmail.com",
+      "password": "fasfsdafsdaf",
+      "phoneNumber": "21423411243",
+      "city": "fafdas",
+      "zipCode": "fsafsdafsa",
+      "address": "fasdfas",
+      "description": "fasfdfasddf"
+    },
+    {
+      "id": 2,
+      "firstname": "fasfdf",
+      "lastname": "fsdafdsaf",
+      "email": "fsafadsfa@gmail.com",
+      "password": "fgasfsad",
+      "phoneNumber": "fsdafsafsdafsa",
+      "city": "fasdfsdaf",
+      "zipCode": "fdsfsadf",
+      "address": "fasdsfsdaf",
+      "description": "fdsafdafsdfsa"
     }
   ]
 }

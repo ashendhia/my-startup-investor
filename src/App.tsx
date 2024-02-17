@@ -1,11 +1,17 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import SharedLayout from "./pages/SharedLayout";
-import Map from "./pages/Map";
-import Funded from "./pages/Funded";
-import Profile from "./pages/Profile";
-import Home from "./pages/Home";
-import Settings from "./pages/Settings";
-import FindStartUps from "./pages/FindStartUps";
+
+// App.js
+
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import SharedLayout from './pages/SharedLayout';
+import Map from './pages/Map';
+import Funded from './pages/Funded';
+import Profile from './pages/Profile';
+import Home from './pages/Home';
+import Settings from './pages/Settings';
+import FindStartUps from './pages/FindStartUps';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import ProtectedRoute from './components/ProtectedRoute';
 import RoadMapStartUp from "./pages/RoadMapStartUp";
 import SharedLayoutStartup from "./pages/SharedLayoutStartup";
 import LegalHelp from "./pages/LegalHelp";
@@ -23,40 +29,79 @@ import Investors from "./pages/Investors";
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <PageProvider>
-          <Routes>
-            <Route path="/dashboard" element={<SharedLayout />}>
-              <Route index element={<Navigate to="/dashboard/home" />} />
-              <Route path="/dashboard/home" element={<Home />} />
-              <Route path="startups" element={<FindStartUps />} />
-              <Route path="map" element={<Map />} />
-              <Route path="tracking" element={<Funded />} />
-              <Route path="profile" element={<Profile />} />
-              <Route path="settings" element={<Settings />} />
-            </Route>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Navigate to="/login" />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={ <ProtectedRoute><SharedLayout /></ProtectedRoute>}>
+        <Route
+          path="/dashboard/home"
+          element={
+            <ProtectedRoute>
+              <Home />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/dashboard/startups"
+          element={
+            <ProtectedRoute>
+              <FindStartUps />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/dashboard/map"
+          element={
+            <ProtectedRoute>
+              <Map />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/dashboard/tracking"
+          element={
+            <ProtectedRoute>
+              <Funded />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/dashboard/profile"
+          element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/dashboard/settings"
+          element={
+            <ProtectedRoute>
+              <Settings />
+            </ProtectedRoute>
+          }
+        />
+        </Route>
+  <Route path="/startup" element={<ProtectedRoute><SharedLayoutStartup /></ProtectedRoute>}>
+  <Route path="/startup/roadmap" element={<ProtectedRoute><RoadMapStartUp /></ProtectedRoute>} />
+  <Route path="/startup/roadmap/1" element={<ProtectedRoute><RoadMapFirst /></ProtectedRoute>} />
+  <Route path="/startup/roadmap/2" element={<ProtectedRoute><RoadMapSecond /></ProtectedRoute>} />
+  <Route path="/startup/roadmap/3" element={<ProtectedRoute><RoadMapThird /></ProtectedRoute>} />
+  <Route path="/startup/roadmap/4" element={<ProtectedRoute><RoadMapForth /></ProtectedRoute>} />
+  <Route path="/startup/roadmap/5" element={<ProtectedRoute><RoadMapFifth /></ProtectedRoute>} />
 
-            <Route path="/startup" element={<SharedLayoutStartup />}>
-              <Route path="roadmap" element={<RoadMapStartUp />} />
-              <Route path="roadmap/1" element={<RoadMapFirst />} />
-              <Route path="roadmap/2" element={<RoadMapSecond />} />
-              <Route path="roadmap/3" element={<RoadMapThird />} />
-              <Route path="roadmap/4" element={<RoadMapForth />} />
-              <Route path="roadmap/5" element={<RoadMapFifth />} />
+  <Route path="/startup/legalhelp" element={<ProtectedRoute><LegalHelp /></ProtectedRoute>} />
+  <Route path="/startup/investments" element={<ProtectedRoute><Investments /></ProtectedRoute>}>
+    <Route path="/startup/investors" element={<ProtectedRoute><Investors /></ProtectedRoute>} />
 
-              <Route path="legalhelp" element={<LegalHelp />} />
-              <Route path="investments" element={<Investments />} />
-              <Route path="investments/investors" element={<Investors />} />
-
-              <Route path="advisors" element={<Advisors />} />
-              <Route path="profile" element={<ProfileStartup />} />
-              <Route path="settings" element={<SettingsStartup />} />
-            </Route>
-          </Routes>
-        </PageProvider>
-      </BrowserRouter>
-    </>
+  <Route path="/startup/advisors" element={<ProtectedRoute><Advisors /></ProtectedRoute>} />
+  <Route path="/startup/profile" element={<ProtectedRoute><ProfileStartup /></ProtectedRoute>} />
+  <Route path="/startup/settings" element={<ProtectedRoute><SettingsStartup /></ProtectedRoute>} />
+</Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
