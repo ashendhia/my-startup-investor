@@ -24,14 +24,16 @@ import RoadMapSecond from "./components/RoadMapStartUp/RoadMapSecond";
 import RoadMapThird from "./components/RoadMapStartUp/RoadMapThird";
 import RoadMapForth from "./components/RoadMapStartUp/RoadMapForth";
 import RoadMapFifth from "./components/RoadMapStartUp/RoadMapFifth";
-import { PageProvider } from "./context/PageContext";
 import Investors from "./pages/Investors";
+import { PageProvider } from './context/PageContext';
 
 function App() {
   return (
+
     <BrowserRouter>
+    <PageProvider>
       <Routes>
-        <Route path="/" element={<Navigate to="/login" />} />
+        <Route path="/" element={<Navigate to="/dashboard/home" />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={ <ProtectedRoute><SharedLayout /></ProtectedRoute>}>
@@ -93,7 +95,7 @@ function App() {
   <Route path="/startup/roadmap/5" element={<ProtectedRoute><RoadMapFifth /></ProtectedRoute>} />
 
   <Route path="/startup/legalhelp" element={<ProtectedRoute><LegalHelp /></ProtectedRoute>} />
-  <Route path="/startup/investments" element={<ProtectedRoute><Investments /></ProtectedRoute>}>
+  <Route path="/startup/investments" element={<ProtectedRoute><Investments /></ProtectedRoute>} />
     <Route path="/startup/investors" element={<ProtectedRoute><Investors /></ProtectedRoute>} />
 
   <Route path="/startup/advisors" element={<ProtectedRoute><Advisors /></ProtectedRoute>} />
@@ -101,6 +103,7 @@ function App() {
   <Route path="/startup/settings" element={<ProtectedRoute><SettingsStartup /></ProtectedRoute>} />
 </Route>
       </Routes>
+    </PageProvider>
     </BrowserRouter>
   );
 }
